@@ -1,0 +1,46 @@
+package hanghae99_study;
+
+import java.util.*;
+
+public class study_day5 {
+	
+	static class Solution {
+		public int solution(int[]nums){
+			int answer =0;
+			int[] arr = new int [nums.length/2];
+			int[] dist = Arrays.stream(nums).distinct().toArray();		
+			int arrSize = Math.min(dist.length, arr.length);
+			for(int i=0; i<arrSize; i++) {
+				arr[i] = dist[i];
+				if(arr[i]!=0) {
+					answer++;
+				}
+			}
+			
+			return answer;
+		}
+	}
+	
+	static class Solution2{
+		public int solution(int[] nums) {;
+			int pick = (int) Arrays.stream(nums).distinct().count();
+			int arr = nums.length/2;
+			
+			return Math.min(pick, arr);
+		}
+	}
+	
+	static class Solution3{
+		
+	}
+	
+	public static void main(String[] args) {
+		int [] nums = {3,1,2,3};
+		//		{3,3,3,2,2,4}	
+		//		{3,3,3,2,2,2}	
+		Solution2 sol = new Solution2();
+		int answer = sol.solution(nums);
+		System.out.println(answer);
+		
+	}
+}

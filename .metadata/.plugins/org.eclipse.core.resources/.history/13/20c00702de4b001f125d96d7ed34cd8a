@@ -1,0 +1,29 @@
+package hanghae99_study;
+
+public class study_day5 {
+	
+	static class Solution {
+		public int solution(){
+			int answer =0;
+			
+			
+			
+			return answer;
+		}
+	}
+	
+	static class Solution2{
+	
+	}
+	
+	static class Solution3{
+		
+	}
+	
+	public static void main(String[] args) {
+		int [] nums = {3,1,2,3};
+		//		{3,3,3,2,2,4}	
+		//		{3,3,3,2,2,2}	
+		
+	}
+}
