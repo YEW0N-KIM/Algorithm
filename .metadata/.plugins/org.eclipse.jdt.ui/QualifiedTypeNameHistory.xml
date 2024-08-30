@@ -3,10 +3,12 @@
     <fullyQualifiedTypeName name="hanghae99_study.day1.자연수뒤집기.Solution"/>
     <fullyQualifiedTypeName name="hanghae99_study.study_day2.Solution2"/>
     <fullyQualifiedTypeName name="hanghae99_study.study_day3.Solution2"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.net.URL"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>
