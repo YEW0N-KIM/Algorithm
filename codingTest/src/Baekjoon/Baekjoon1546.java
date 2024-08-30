@@ -1,8 +1,8 @@
-package baekjun;
+package Baekjoon;
 
 import java.util.Scanner;
 
-public class 문제1546 {
+public class Baekjoon1546 {
 	
 	
 	public static void main(String[] args) {

@@ -1,8 +1,8 @@
-package baekjun;
+package Baekjoon;
 
 import java.util.Scanner;
 
-public class 문제11720 {
+public class Baekjoon11720 {
  public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 	int N = sc.nextInt();
