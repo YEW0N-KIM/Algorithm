@@ -13,11 +13,11 @@ public class Baekjoon1018 {
 		int M = Integer.parseInt(req[0]);
 		int N = Integer.parseInt(req[1]);
 		
-		char[][] chess = new char[M][N];
-		char[][] chess2 = new char[M][N];
+		char[][] chess = new char[8][8];
+		char[][] chess2 = new char[8][8];
 		
-		// 두개의 체스판 만들기
-		for(int i=0; i<M;i++) {
+		// 비교할 두개의 체스판 만들기
+		for(int i=0; i<8;i++) {
 			
 			chess[0][0] = 'W';
 			chess2[0][0] = 'B';
@@ -35,7 +35,8 @@ public class Baekjoon1018 {
 					chess2[i][0] = 'W';
 				}
 			}
-			for(int j=0; j<N; j++) {
+			
+			for(int j=0; j<8; j++) {
 				
 				if(j!=0) {
 					if(chess[i][j-1] == 'W') {
@@ -54,25 +55,42 @@ public class Baekjoon1018 {
 			}
 		}
 		
-		// 비교하기
-		int chesscheck = 0;
-		int chess2check = 0;
-		
+		// 받은 체스판
+		char[][] input = new char[M][N];
 		for(int i=0; i<M; i++) {
 			String line = br.readLine();
 			for(int j=0; j<N; j++) {
-				if(line.charAt(j) != chess[i][j]) {
-					chesscheck ++;
+				input[i][j] = line.charAt(j);
+			}
+		}
+		
+		// 비교
+		int min = Integer.MAX_VALUE;
+		
+		for(int i=0; i<=M-8; i++) {
+			for(int j=0; j<=N-8; j++) {
+				int checkchess = 0;
+				int checkchess2 = 0;
+				
+				for(int x=0; x<8; x++) {
+					for(int y =0; y<8; y++) {
+						if(input[i+x][j+y]!= chess[x][y]) {
+							checkchess ++;
+						}
+						if(input[i+x][j+y]!= chess2[x][y]) {
+							checkchess2 ++;
+						}
+					}
+
 				}
-				if(line.charAt(j) != chess2[i][j]) {
-					chess2check ++;
+				int a = checkchess<checkchess2? checkchess : checkchess2;
+				if(min>a) {
+					min = a;
 				}
 			}
 		}
 		
-		System.out.println(chesscheck<chess2check ? chesscheck: chess2check);		
-		System.out.println(chesscheck);
-		System.out.println(chess2check);
+		System.out.println(min);
 		
 	}
 }
