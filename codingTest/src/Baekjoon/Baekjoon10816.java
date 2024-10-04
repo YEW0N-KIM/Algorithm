@@ -13,9 +13,27 @@ public class Baekjoon10816 {
 		String[] card = br.readLine().split(" ");
 		
 		HashMap<Integer, Integer> cards = new HashMap<>();
+		
 		for(int i=0; i<N;i++) {
-			int a = 0;
+			int a = Integer.parseInt(card[i]);
+			
+			if(cards.get(a) != null) {
+				cards.put(a, cards.get(a)+1);
+			} else {
+				cards.put(a, 1);
+			}
 			
 		}
+		
+		int M = Integer.parseInt(br.readLine());
+		StringBuilder sb = new StringBuilder();
+		String[] check = br.readLine().split(" ");
+		
+		for(int i=0; i<M; i++) {
+			int result = cards.get(Integer.parseInt(check[i])) == null? 0 :cards.get(Integer.parseInt(check[i]));
+			sb.append(result+ " ");
+		}
+		
+		System.out.println(sb.toString().trim());
 	}
 }
